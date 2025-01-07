@@ -1,0 +1,219 @@
+{
+	"info": {
+		"_postman_id": "074be083-0d77-4637-a178-913d0a5bb961",
+		"name": "First Collection In MennaDevs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28294863"
+	},
+	"item": [
+		{
+			"name": "Add Book",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							" \r",
+							"\r",
+							"\r",
+							"\r",
+							"let newColor = pm.variables.replaceIn('{{$randomColor}}')\r",
+							"let newMonth = pm.variables.replaceIn('{{$randomMonth}}')\r",
+							"\r",
+							"let ISBNNumber = pm.variables.replaceIn('{{$randomInt}}')\r",
+							"\r",
+							"let AISLENumber =pm.variables.replaceIn('{{$randomInt}}')\r",
+							"\r",
+							"let FullName = pm.variables.replaceIn('{{$randomFullName}}')\r",
+							"\r",
+							"\r",
+							"pm.collectionVariables.set(\"NewBookName\",newColor+\" \"+newMonth)\r",
+							"pm.collectionVariables.set(\"NewISBNNumber\",ISBNNumber)\r",
+							"pm.collectionVariables.set(\"NewAisleNumber\",AISLENumber*15)\r",
+							"pm.collectionVariables.set(\"AuthorName\",FullName)\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let myResponse = pm.response.json()\r",
+							"\r",
+							"let id = myResponse.ID\r",
+							"\r",
+							"console.log(id)\r",
+							"\r",
+							"pm.collectionVariables.set(\"NewID\",id)\r",
+							"\r",
+							"pm.test(\"This Is To Test The Response Code\", function () {\r",
+							"    console.log(\"Response Object:\", pm.response);\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"name\": \"{{NewBookName}}\",\r\n      \"isbn\": \"{{NewISBNNumber}}\",\r\n      \"aisle\": \"{{NewAisleNumber}}\",\r\n      \"author\":\"{{AuthorName}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rahulshettyacademy.com/Library/Addbook.php",
+					"protocol": "https",
+					"host": [
+						"rahulshettyacademy",
+						"com"
+					],
+					"path": [
+						"Library",
+						"Addbook.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Book By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://rahulshettyacademy.com/Library/GetBook.php?ID={{NewID}}",
+					"protocol": "https",
+					"host": [
+						"rahulshettyacademy",
+						"com"
+					],
+					"path": [
+						"Library",
+						"GetBook.php"
+					],
+					"query": [
+						{
+							"key": "ID",
+							"value": "{{NewID}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Book By Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ID\" : \"{{NewID}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rahulshettyacademy.com/Library/DeleteBook.php",
+					"protocol": "https",
+					"host": [
+						"rahulshettyacademy",
+						"com"
+					],
+					"path": [
+						"Library",
+						"DeleteBook.php"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "NewBookName",
+			"value": ""
+		},
+		{
+			"key": "NewISBNNumber",
+			"value": ""
+		},
+		{
+			"key": "NewAisleNumber",
+			"value": ""
+		},
+		{
+			"key": "AuthorName",
+			"value": ""
+		},
+		{
+			"key": "NewID",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
