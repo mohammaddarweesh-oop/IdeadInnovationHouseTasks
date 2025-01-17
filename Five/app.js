@@ -121,6 +121,10 @@ app.patch("/books/:id/translation", (req, res) => {
       .status(404)
       .json({ error: "sorry the book number is not found " });
 
+  book.ChangeTranslation(language);
+
+  res.status(200).json({ message: "Translation updated successfully", book });
+
   // please complete the logic to update the lanaguge of translation
 });
 
