@@ -1,0 +1,9 @@
+create database library;
+
+use library;
+
+create table books (
+    id int not null primary Key auto_increment,
+    name varchar(250) not null,
+    title varchar(250) not null
+);
