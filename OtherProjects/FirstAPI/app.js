@@ -141,7 +141,7 @@ app.delete("/api/books/:id", (req, res) => {
  * PATCH /api/books/:id/translation
  * Appends a translation language to the book's title.
  * Params: Book ID in the URL.
- * Body: { language (string) }.
+ * Body: { language - (string) }.
  * Returns: 200 OK, 404 for invalid/missing language or missing ID, 500 on error.
  */
 app.patch("/api/books/:id/translation", (req, res) => {
