@@ -252,6 +252,29 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Get All Cities",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/cities",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"cities"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -294,6 +317,31 @@
 				},
 				{
 					"name": "Create New Book",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"let newID =pm.variables.replaceIn('{{$randomInt}}')\r",
+									"\r",
+									"\r",
+									"let newName = pm.variables.replaceIn('{{$randomBankAccountName}}')\r",
+									"\r",
+									"let newTitle=pm.variables.replaceIn('{{$randomCompanyName}}')\r",
+									"\r",
+									"\r",
+									"\r",
+									"pm.collectionVariables.set(\"TheID\",newID)\r",
+									"\r",
+									"pm.collectionVariables.set(\"TheNAME\",newName)\r",
+									"\r",
+									"pm.collectionVariables.set(\"Thetitle\",newTitle)"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"request": {
 						"auth": {
 							"type": "noauth"
@@ -302,7 +350,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": 4,\r\n    \"name\":\"mazen sami\",\r\n    \"title\":\"yyyy\"\r\n}",
+							"raw": "{\r\n    \"id\": \"{{TheID}}\",\r\n    \"name\":\"{{TheNAME}}\",\r\n    \"title\":\"{{Thetitle}}\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -396,6 +444,20 @@
 					"response": []
 				}
 			]
+		}
+	],
+	"variable": [
+		{
+			"key": "TheID",
+			"value": ""
+		},
+		{
+			"key": "TheNAME",
+			"value": ""
+		},
+		{
+			"key": "Thetitle",
+			"value": ""
 		}
 	]
 }
