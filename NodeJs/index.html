@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API is Great</title>
+    <style>
+      /* General Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #f4f4f9;
+        color: #333;
+      }
+
+      /* Navbar */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #2c3e50;
+        padding: 10px 20px;
+        color: white;
+      }
+
+      .navbar a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 18px;
+        transition: color 0.3s ease;
+      }
+
+      .navbar a:hover {
+        color: #1abc9c;
+      }
+
+      /* Hero Section */
+      .hero {
+        background: url("https://via.placeholder.com/1920x1080") no-repeat
+          center center/cover;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 4rem;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+      }
+
+      .hero p {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+      }
+
+      .btn {
+        background-color: #1abc9c;
+        color: white;
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn:hover {
+        background-color: #16a085;
+      }
+
+      /* Features Section */
+      .features {
+        padding: 50px 20px;
+        text-align: center;
+      }
+
+      .features h2 {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+        color: #2c3e50;
+      }
+
+      .feature-item {
+        display: inline-block;
+        width: 30%;
+        margin: 20px;
+        vertical-align: top;
+      }
+
+      .feature-item i {
+        font-size: 3rem;
+        color: #1abc9c;
+        margin-bottom: 15px;
+      }
+
+      .feature-item h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      .feature-item p {
+        font-size: 1rem;
+        color: #666;
+      }
+
+      /* Footer */
+      footer {
+        background-color: #2c3e50;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">API is Great</div>
+      <div>
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div>
+        <h1>Welcome to API World</h1>
+        <p>Your gateway to seamless integration and powerful data handling.</p>
+        <button class="btn">Get Started</button>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+      <h2>Why Choose Us?</h2>
+      <div class="feature-item">
+        <i class="fas fa-cogs"></i>
+        <h3>Easy Integration</h3>
+        <p>Integrate with our API in minutes using simple documentation.</p>
+      </div>
+      <div class="feature-item">
+        <i class="fas fa-shield-alt"></i>
+        <h3>Secure</h3>
+        <p>We prioritize security to ensure your data stays safe.</p>
+      </div>
+      <div class="feature-item">
+        <i class="fas fa-chart-line"></i>
+        <h3>Scalable</h3>
+        <p>Our API scales effortlessly to meet your growing needs.</p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>&copy; 2023 API is Great. All rights reserved.</footer>
+
+    <!-- Font Awesome Icons -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
