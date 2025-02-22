@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Operations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>File Operations</h2>
+
+        <h3>Create File</h3>
+        <input type="text" id="createFileName" placeholder="Enter file name">
+        <textarea id="createFileContent" placeholder="Enter file content"></textarea>
+        <button onclick="createFile()">Create File</button>
+
+        <h3>Rename File</h3>
+        <input type="text" id="oldFileName" placeholder="Enter current file name">
+        <input type="text" id="newFileName" placeholder="Enter new file name">
+        <button onclick="renameFile()">Rename File</button>
+
+        <h3>Read File</h3>
+        <input type="text" id="readFileName" placeholder="Enter file name">
+        <button onclick="readFile()">Read File</button>
+
+        <h3>Update File</h3>
+        <input type="text" id="updateFileName" placeholder="Enter file name">
+        <textarea id="updateFileContent" placeholder="Enter new content"></textarea>
+        <button onclick="updateFile()">Update File</button>
+
+        <h3>Append to File</h3>
+        <input type="text" id="appendFileName" placeholder="Enter file name">
+        <textarea id="appendFileContent" placeholder="Enter content to append"></textarea>
+        <button onclick="appendToFile()">Append to File</button>
+
+        <h3>Clear File Content</h3>
+        <input type="text" id="clearFileName" placeholder="Enter file name">
+        <button onclick="clearFile()">Clear File Content</button>
+
+        <h3>Delete File</h3>
+        <input type="text" id="deleteFileName" placeholder="Enter file name">
+        <button onclick="deleteFile()">Delete File</button>
+
+        <p id="output"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

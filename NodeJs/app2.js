@@ -1,4 +1,5 @@
 const fs = require("fs/promises");
+const readStream = require('fs')
 
 // async function readFileContent(filePath) {
 //   try {
@@ -44,6 +45,18 @@ const fs = require("fs/promises");
 
 // deleteFileContent("./t.text");
 
+// async function renameFileContent(filePath, newName) {
+//   try {
+//     await fs.rename(filePath, newName);
+//     console.log("Content ....");
+//   } catch (error) {
+//     console.log(error.message);
+//   }
+// }
+
+// renameFileContent("./t.text", "name");
+
+
 async function renameFileContent(filePath, newName) {
   try {
     await fs.rename(filePath, newName);
@@ -52,5 +65,3 @@ async function renameFileContent(filePath, newName) {
     console.log(error.message);
   }
 }
-
-renameFileContent("./t.text", "name");
