@@ -1,73 +1,73 @@
 /* styles.css */
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #e3f2fd;
-    margin: 0;
-    padding-top: 10px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e3f2fd;
+  margin: 0;
+  padding-top: 10px;
 }
 
 .container {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    width: 100%;
-    width: 400px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 100%;
+  width: 400px;
 }
 
 h2 {
-    color: #1565c0;
-    margin-bottom: 20px;
+  color: #1565c0;
+  margin-bottom: 20px;
 }
 
 h3 {
-    color: #1976d2;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    font-size: 18px;
-    border-bottom: 2px solid #1976d2;
-    display: inline-block;
-    padding-bottom: 5px;
+  color: #1976d2;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  border-bottom: 2px solid #1976d2;
+  display: inline-block;
+  padding-bottom: 5px;
 }
 
 input,
 textarea {
-    width: calc(100% - 20px);
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #bbb;
-    border-radius: 5px;
-    font-size: 14px;
+  width: calc(100% - 20px);
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  font-size: 14px;
 }
 
 textarea {
-    height: 80px;
-    resize: none;
+  height: 80px;
+  resize: none;
 }
 
 button {
-    width: 100%;
-    padding: 12px;
-    margin: 8px 0;
-    border: none;
-    background-color: #1e88e5;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background 0.3s;
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: none;
+  background-color: #1e88e5;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
 }
 
 button:hover {
-    background-color: #1565c0;
+  background-color: #1565c0;
 }
 
 #output {
-    margin-top: 15px;
-    font-weight: bold;
-    color: #d32f2f;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #d32f2f;
 }
