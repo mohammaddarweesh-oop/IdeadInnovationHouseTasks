@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Manager</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>File Manager</h2>
+
+      <h3>Read File</h3>
+      <input type="text" id="readFileName" placeholder="Enter file name" />
+      <button onclick="readFile()">Read File</button>
+      <textarea id="readOutput"></textarea>
+
+      <h3>Write File</h3>
+      <input type="text" id="writeFileName" placeholder="Enter file name" />
+      <textarea id="writeContent" placeholder="Enter content"></textarea>
+      <button onclick="writeFile()">Write File</button>
+
+      <h3>Append to File</h3>
+      <input type="text" id="appendFileName" placeholder="Enter file name" />
+      <textarea id="appendContent" placeholder="Enter content"></textarea>
+      <button onclick="appendFile()">Append to File</button>
+
+      <h3>Delete File</h3>
+      <input type="text" id="deleteFileName" placeholder="Enter file name" />
+      <button onclick="deleteFile()">Delete File</button>
+
+      <h3>Rename File</h3>
+      <input type="text" id="oldFileName" placeholder="Current file name" />
+      <input type="text" id="newFileName" placeholder="New file name" />
+      <button onclick="renameFile()">Rename File</button>
+
+      <h3>Create Directory</h3>
+      <input
+        type="text"
+        id="createDirName"
+        placeholder="Enter directory name"
+      />
+      <button onclick="createDirectory()">Create Directory</button>
+
+      <h3>Delete Directory</h3>
+      <input
+        type="text"
+        id="deleteDirName"
+        placeholder="Enter directory name"
+      />
+      <button onclick="deleteDirectory()">Delete Directory</button>
+
+      <p id="output"></p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,5 +1,13 @@
 const fs = require("fs/promises");
-const readStream = require('fs')
+const readStream = fs.createReadStream("name.txt", { encoding: "utf8" });
+
+readStream.on("data", (chunk) => {
+  console.log("Received chunk:", chunk);
+});
+
+readStream.on("end", () => {
+  console.log("Finished reading the file.");
+});
 
 // async function readFileContent(filePath) {
 //   try {
@@ -55,7 +63,6 @@ const readStream = require('fs')
 // }
 
 // renameFileContent("./t.text", "name");
-
 
 async function renameFileContent(filePath, newName) {
   try {
